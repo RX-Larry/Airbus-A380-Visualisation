@@ -6,7 +6,24 @@
     "title": "A380 deliveries",
     "width": {"step": 40},
     "height": 200,
-    "mark": {"type": "bar", "cornerRadiusEnd": 0},
+    "layer": [
+      {"mark": "bar"},
+      {
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "yOffset": -3,
+          "xOffset": 20,
+          "fontSize": 10
+        },
+        "encoding": {
+          "text": {"field": "deliveries", "type":"ordinal"},
+          "color": {
+            "value": "black"
+          }
+        }
+      }
+    ],
     "encoding": {
       "x": {
         "title": "Year",

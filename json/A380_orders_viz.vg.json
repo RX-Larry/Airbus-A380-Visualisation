@@ -29,7 +29,8 @@
       "title": "Year",
       "field": "start_year",
       "type": "ordinal",
-      "scale": {"type": "point", "padding": 0}
+      "scale": {"type": "point", "padding": 0},
+      "axis": {"labelAngle": 0}
     },
     "x2": {"field": "end_year"},
     "y": {

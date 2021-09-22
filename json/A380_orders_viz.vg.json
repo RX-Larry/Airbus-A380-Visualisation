@@ -126,7 +126,7 @@
       "field": "orders",
       "type": "quantitative"
     },
-    "color": {"value": "lightblue"},
+    "color": {"value": "#b3cbfa"},
     "tooltip": [
       {"field": "start_year", "type": "nominal"},
       {"field": "end_year", "type": "nominal"},

@@ -126,7 +126,7 @@
         "field": "deliveries",
         "type": "quantitative"
       },
-      "color": {"value": "lightblue"},
+      "color": {"value": "#05b106"},
       "tooltip": [
         {"field": "start_year", "type": "nominal"},
         {"field": "end_year", "type": "nominal"},

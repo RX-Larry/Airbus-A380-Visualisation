@@ -17,7 +17,7 @@
         "fontSize": 10
       },
       "encoding": {
-        "text": {"field": "orders", "type":"ordinal"},
+        "text": {"field": "orders", "type":"quantitative"},
         "color": {
           "value": "black"
         }

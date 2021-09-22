@@ -17,7 +17,7 @@
           "fontSize": 10
         },
         "encoding": {
-          "text": {"field": "deliveries", "type":"ordinal"},
+          "text": {"field": "deliveries", "type":"quantitative"},
           "color": {
             "value": "black"
           }
@@ -34,7 +34,7 @@
       },
       "x2": {"field": "end_year"},
       "y": {
-        "title": "Cumulative delieveries",
+        "title": "Cumulative deliveries",
         "field": "deliveries",
         "type": "quantitative"
       },

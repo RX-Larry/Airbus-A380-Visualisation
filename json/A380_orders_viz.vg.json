@@ -6,7 +6,24 @@
   "title": "A380 orders",
   "width": {"step": 40},
   "height": 200,
-  "mark": {"type": "bar", "cornerRadiusEnd": 0},
+  "layer": [
+    {"mark": "bar"},
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "yOffset": -10,
+        "xOffset": 20,
+        "fontSize": 10
+      },
+      "encoding": {
+        "text": {"field": "orders", "type":"ordinal"},
+        "color": {
+          "value": "black"
+        }
+      }
+    }
+  ],
   "encoding": {
     "x": {
       "title": "Year",

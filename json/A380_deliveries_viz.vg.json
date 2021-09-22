@@ -1,0 +1,136 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "values": [
+        {
+          "start_year": "2001",
+          "end_year": "2002",
+          "deliveries": 0
+        },
+        {
+          "start_year": "2002",
+          "end_year": "2003",
+          "deliveries": 0
+        },
+        {
+          "start_year": "2003",
+          "end_year": "2004",
+          "deliveries": 0
+        },
+        {
+          "start_year": "2004",
+          "end_year": "2005",
+          "deliveries": 0
+        },
+        {
+          "start_year": "2005",
+          "end_year": "2006",
+          "deliveries": 0
+        },
+        {
+          "start_year": "2006",
+          "end_year": "2007",
+          "deliveries": 0
+        },
+        {
+          "start_year": "2007",
+          "end_year": "2008",
+          "deliveries": 1
+        },
+        {
+          "start_year": "2008",
+          "end_year": "2009",
+          "deliveries": 13
+        },
+        {
+          "start_year": "2009",
+          "end_year": "2010",
+          "deliveries": 23
+        },
+        {
+          "start_year": "2010",
+          "end_year": "2011",
+          "deliveries": 41
+        },
+        {
+          "start_year": "2011",
+          "end_year": "2012",
+          "deliveries": 67
+        },
+        {
+          "start_year": "2012",
+          "end_year": "2013",
+          "deliveries": 97
+        },
+        {
+          "start_year": "2013",
+          "end_year": "2014",
+          "deliveries": 122
+        },
+        {
+          "start_year": "2014",
+          "end_year": "2015",
+          "deliveries": 152
+        },
+        {
+          "start_year": "2015",
+          "end_year": "2016",
+          "deliveries": 179
+        },
+        {
+          "start_year": "2016",
+          "end_year": "2017",
+          "deliveries": 207
+        },
+        {
+          "start_year": "2017",
+          "end_year": "2018",
+          "deliveries": 222
+        },
+        {
+          "start_year": "2018",
+          "end_year": "2019",
+          "deliveries": 234
+        },
+        {
+          "start_year": "2019",
+          "end_year": "2020",
+          "deliveries": 242
+        },
+        {
+          "start_year": "2020",
+          "end_year": "2021",
+          "deliveries": 246
+        },
+        {
+          "start_year": "2021",
+          "end_year": "2022",
+          "deliveries": 248
+        }
+      ]
+    },
+    "title": "A380 deliveries",
+    "width": {"step": 40},
+    "height": 200,
+    "mark": {"type": "bar", "cornerRadiusEnd": 0},
+    "encoding": {
+      "x": {
+        "title": "Year",
+        "field": "start_year",
+        "type": "ordinal",
+        "scale": {"type": "point", "padding": 0}
+      },
+      "x2": {"field": "end_year"},
+      "y": {
+        "title": "Cumulative delieveries",
+        "field": "deliveries",
+        "type": "quantitative"
+      },
+      "color": {"value": "lightblue"},
+      "tooltip": [
+        {"field": "start_year", "type": "nominal"},
+        {"field": "end_year", "type": "nominal"},
+        {"field": "deliveries", "type": "quantitative"}
+      ]
+    }
+  }

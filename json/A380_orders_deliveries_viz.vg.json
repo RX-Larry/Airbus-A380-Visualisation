@@ -1,0 +1,76 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": {"step": 40},
+    "height": 300,
+    "title": "A380 Cumulative Orders & Deliveries",
+    "layer": [
+        {
+            "data": {
+                "url": "data/A380_orders.csv"
+            },
+            "mark": {
+                "type": "bar", 
+                "cornerRadiusEnd": 0
+            },
+            "encoding": {
+                "x": {
+                    "title": "Year",
+                    "field": "start_year",
+                    "type": "ordinal",
+                    "scale": {
+                        "type": "point",
+                        "padding": 0
+                    }
+                },
+                "x2": {
+                    "field": "end_year"
+                },
+                "y": {
+                    "title": "Cumulative Orders & Deliveries",
+                    "field": "orders",
+                    "type": "quantitative"
+                },
+                "color": {"value": "#b3cbfa"},
+                "tooltip": [
+                  {"field": "start_year", "type": "nominal"},
+                  {"field": "end_year", "type": "nominal"},
+                  {"field": "orders", "type": "quantitative"}
+                ]
+            }
+        },
+        {
+            "data": {
+                "url": "data/A380_deliveries.csv"
+            },
+            "mark": {
+                "type": "bar", 
+                "cornerRadiusEnd": 0
+            },
+            "encoding": {
+                "x": {
+                    "title": "Year",
+                    "field": "start_year",
+                    "type": "ordinal",
+                    "scale": {
+                        "type": "point",
+                        "padding": 0
+                    }
+                },
+                "x2": {
+                    "field": "end_year"
+                },
+                "y": {
+                    "title": "Cumulative Orders & Deliveries",
+                    "field": "deliveries",
+                    "type": "quantitative"
+                },
+                "color": {"value": "#05b106"},
+                "tooltip": [
+                  {"field": "start_year", "type": "nominal"},
+                  {"field": "end_year", "type": "nominal"},
+                  {"field": "deliveries", "type": "quantitative"}
+                ]
+            }
+        }
+    ]
+  }

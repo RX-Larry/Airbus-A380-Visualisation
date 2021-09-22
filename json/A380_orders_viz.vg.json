@@ -125,6 +125,12 @@
       "title": "Cumulative orders",
       "field": "orders",
       "type": "quantitative"
-    }
+    },
+    "color": {"value": "lightblue"},
+    "tooltip": [
+      {"field": "start_year", "type": "nominal"},
+      {"field": "end_year", "type": "nominal"},
+      {"field": "orders", "type": "quantitative"}
+    ]
   }
 }

@@ -7,28 +7,41 @@
         {
             "data": {
                 "url": "data/A380_orders.csv"
-            },
-            "mark": {
-                "type": "bar", 
-                "cornerRadiusEnd": 0
-            },
-            "encoding": {
-                "x": {
-                    "title": "Year",
-                    "field": "start_year",
-                    "type": "ordinal",
-                    "scale": {
-                        "type": "point",
-                        "padding": 0
+              },
+              "title": "A380 orders",
+              "width": {"step": 40},
+              "height": 200,
+              "layer": [
+                {"mark": "bar"},
+                {
+                  "mark": {
+                    "type": "text",
+                    "align": "center",
+                    "yOffset": -10,
+                    "xOffset": 20,
+                    "fontSize": 10
+                  },
+                  "encoding": {
+                    "text": {"field": "orders", "type":"quantitative"},
+                    "color": {
+                      "value": "black"
                     }
+                  }
+                }
+              ],
+              "encoding": {
+                "x": {
+                  "title": "Year",
+                  "field": "start_year",
+                  "type": "ordinal",
+                  "scale": {"type": "point", "padding": 0},
+                  "axis": {"labelAngle": 0}
                 },
-                "x2": {
-                    "field": "end_year"
-                },
+                "x2": {"field": "end_year"},
                 "y": {
-                    "title": "Cumulative Orders & Deliveries",
-                    "field": "orders",
-                    "type": "quantitative"
+                  "title": "",
+                  "field": "orders",
+                  "type": "quantitative"
                 },
                 "color": {"value": "#b3cbfa"},
                 "tooltip": [
@@ -36,33 +49,46 @@
                   {"field": "end_year", "type": "nominal"},
                   {"field": "orders", "type": "quantitative"}
                 ]
-            }
+              }
         },
         {
             "data": {
-                "url": "data/A380_deliveries.csv"
-            },
-            "mark": {
-                "type": "bar", 
-                "cornerRadiusEnd": 0
-            },
-            "encoding": {
-                "x": {
-                    "title": "Year",
-                    "field": "start_year",
-                    "type": "ordinal",
-                    "scale": {
-                        "type": "point",
-                        "padding": 0
+                "url": "data/A380_deliveries_part1.csv"
+              },
+              "title": "A380 deliveries",
+              "width": {"step": 40},
+              "height": 200,
+              "layer": [
+                {"mark": "bar"},
+                {
+                  "mark": {
+                    "type": "text",
+                    "align": "center",
+                    "yOffset": -6,
+                    "xOffset": 20,
+                    "fontSize": 10
+                  },
+                  "encoding": {
+                    "text": {"field": "deliveries", "type":"quantitative"},
+                    "color": {
+                      "value": "black"
                     }
+                  }
+                }
+              ],
+              "encoding": {
+                "x": {
+                  "title": "Year",
+                  "field": "start_year",
+                  "type": "ordinal",
+                  "scale": {"type": "point", "padding": 0},
+                  "axis": {"labelAngle": 0}
                 },
-                "x2": {
-                    "field": "end_year"
-                },
+                "x2": {"field": "end_year"},
                 "y": {
-                    "title": "Cumulative Orders & Deliveries",
-                    "field": "deliveries",
-                    "type": "quantitative"
+                  "title": "",
+                  "field": "deliveries",
+                  "type": "quantitative"
                 },
                 "color": {"value": "#05b106"},
                 "tooltip": [
@@ -71,6 +97,53 @@
                   {"field": "deliveries", "type": "quantitative"}
                 ]
             }
+        },
+        {
+            "data": {
+                "url": "data/A380_deliveries_part2.csv"
+              },
+              "title": "A380 deliveries",
+              "width": {"step": 40},
+              "height": 200,
+              "layer": [
+                {"mark": "bar"},
+                {
+                  "mark": {
+                    "type": "text",
+                    "align": "center",
+                    "yOffset": 5,
+                    "xOffset": 20,
+                    "fontSize": 10
+                  },
+                  "encoding": {
+                    "text": {"field": "deliveries", "type":"quantitative"},
+                    "color": {
+                      "value": "black"
+                    }
+                  }
+                }
+              ],
+              "encoding": {
+                "x": {
+                  "title": "Year",
+                  "field": "start_year",
+                  "type": "ordinal",
+                  "scale": {"type": "point", "padding": 0},
+                  "axis": {"labelAngle": 0}
+                },
+                "x2": {"field": "end_year"},
+                "y": {
+                  "title": "",
+                  "field": "deliveries",
+                  "type": "quantitative"
+                },
+                "color": {"value": "#05b106"},
+                "tooltip": [
+                  {"field": "start_year", "type": "nominal"},
+                  {"field": "end_year", "type": "nominal"},
+                  {"field": "deliveries", "type": "quantitative"}
+                ]
+              }
         }
     ]
   }

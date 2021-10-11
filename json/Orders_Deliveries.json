@@ -1,16 +1,42 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": {"step": 40},
-    "height": 300,
-    "title": "A380 Cumulative Orders & Deliveries",
+    "height": 400,
     "layer": [
+        {
+            "data": {
+                "values": [
+                    {"year": "2019", "y": "0", "description": ""},
+                    {"year": "2019", "y": "400", "description": "COVID-19"}
+                ]
+            },
+            "encoding": {
+                "x": {"field": "year", "type": "ordinal"},
+                "y": {"field": "y", "type": "quantitative"},
+                "color": {"value": "darkgrey"}
+            },
+            "layer": [
+                {"mark": {"type": "line", "strokeDash": [5,8]}},
+                {
+                    "mark": {
+                        "type": "text", "dy": -10
+                    },
+                    "encoding": {
+                        "text": {"field": "description", "type": "nominal"},
+                        "tooltip": [
+                            {"field": "year", "type": "ordinal"},
+                            {"field": "description", "type":"nominal"}
+                        ]
+                    }
+                }         
+            ]
+        },
         {
             "data": {
                 "url": "data/A380_orders.csv"
               },
-              "title": "A380 orders",
               "width": {"step": 40},
-              "height": 200,
+              "height": 400,
               "layer": [
                 {"mark": "bar"},
                 {
@@ -35,13 +61,17 @@
                   "field": "start_year",
                   "type": "ordinal",
                   "scale": {"type": "point", "padding": 0},
-                  "axis": {"labelAngle": 0}
+                  "axis": {"labelAngle": 0, "grid": false}
                 },
                 "x2": {"field": "end_year"},
                 "y": {
                   "title": "",
                   "field": "orders",
-                  "type": "quantitative"
+                  "type": "quantitative",
+                  "scale": {
+                      "domain": [0, 450]
+                  },
+                  "axis": {"grid": false}
                 },
                 "color": {"value": "#b3cbfa"},
                 "tooltip": [
@@ -55,9 +85,8 @@
             "data": {
                 "url": "data/A380_deliveries_part1.csv"
               },
-              "title": "A380 deliveries",
               "width": {"step": 40},
-              "height": 200,
+              "height": 400,
               "layer": [
                 {"mark": "bar"},
                 {
@@ -82,13 +111,17 @@
                   "field": "start_year",
                   "type": "ordinal",
                   "scale": {"type": "point", "padding": 0},
-                  "axis": {"labelAngle": 0}
+                  "axis": {"labelAngle": 0, "grid": false}
                 },
                 "x2": {"field": "end_year"},
                 "y": {
                   "title": "",
                   "field": "deliveries",
-                  "type": "quantitative"
+                  "type": "quantitative",
+                  "scale": {
+                      "domain": [0, 450]
+                  },
+                  "axis": {"grid": false}
                 },
                 "color": {"value": "#05b106"},
                 "tooltip": [
@@ -102,9 +135,8 @@
             "data": {
                 "url": "data/A380_deliveries_part2.csv"
               },
-              "title": "A380 deliveries",
               "width": {"step": 40},
-              "height": 200,
+              "height": 400,
               "layer": [
                 {"mark": "bar"},
                 {
@@ -129,13 +161,17 @@
                   "field": "start_year",
                   "type": "ordinal",
                   "scale": {"type": "point", "padding": 0},
-                  "axis": {"labelAngle": 0}
+                  "axis": {"labelAngle": 0, "grid": false}
                 },
                 "x2": {"field": "end_year"},
                 "y": {
                   "title": "",
                   "field": "deliveries",
-                  "type": "quantitative"
+                  "type": "quantitative",
+                  "scale": {
+                      "domain": [0, 450]
+                  },
+                  "axis": {"grid": false}
                 },
                 "color": {"value": "#05b106"},
                 "tooltip": [
@@ -143,7 +179,7 @@
                   {"field": "end_year", "type": "nominal"},
                   {"field": "deliveries", "type": "quantitative"}
                 ]
-              }
+            }
         }
     ]
   }

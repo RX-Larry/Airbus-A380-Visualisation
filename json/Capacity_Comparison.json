@@ -1,0 +1,57 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"view": {"stroke": ""}},
+    "width": 800,
+    "height": 90,
+    "data": {
+        "url": "data/Capacity_Comparison.csv"
+    },
+    "mark": {
+      "type": "point", 
+      "filled": true
+    },
+    "encoding": {
+      "x": {"field": "Col", "type": "ordinal", "axis": null},
+      "y": {"field": "Shape Label", "type": "ordinal", "axis": null},
+      "row": {
+        "field": "Airliner", 
+        "header": {
+          "title": "Commercial Airliners",
+          "labelFontSize": 12,
+          "labelAlign": "center",
+          "labelPadding": 10,
+          "labelFontWeight": "normal"
+        }
+      },
+      "shape": {
+        "field": "Shape Label",
+        "type": "nominal",
+        "scale": {
+          "domain": ["person", "personWhiteSpace"],
+          "range": [
+            "M1.7 -1.7h-0.8c0.3 -0.2 0.6 -0.5 0.6 -0.9c0 -0.6 -0.4 -1 -1 -1c-0.6 0 -1 0.4 -1 1c0 0.4 0.2 0.7 0.6 0.9h-0.8c-0.4 0 -0.7 0.3 -0.7 0.6v1.9c0 0.3 0.3 0.6 0.6 0.6h0.2c0 0 0 0.1 0 0.1v1.9c0 0.3 0.2 0.6 0.3 0.6h1.3c0.2 0 0.3 -0.3 0.3 -0.6v-1.8c0 0 0 -0.1 0 -0.1h0.2c0.3 0 0.6 -0.3 0.6 -0.6v-2c0.2 -0.3 -0.1 -0.6 -0.4 -0.6z",
+            "M1.7 -1.7h-0.8c0.3 -0.2 0.6 -0.5 0.6 -0.9c0 -0.6 -0.4 -1 -1 -1c-0.6 0 -1 0.4 -1 1c0 0.4 0.2 0.7 0.6 0.9h-0.8c-0.4 0 -0.7 0.3 -0.7 0.6v1.9c0 0.3 0.3 0.6 0.6 0.6h0.2c0 0 0 0.1 0 0.1v1.9c0 0.3 0.2 0.6 0.3 0.6h1.3c0.2 0 0.3 -0.3 0.3 -0.6v-1.8c0 0 0 -0.1 0 -0.1h0.2c0.3 0 0.6 -0.3 0.6 -0.6v-2c0.2 -0.3 -0.1 -0.6 -0.4 -0.6z"
+          ]
+        },
+        "legend": null
+      },
+      "color": {
+        "field": "Shape Label",
+        "type": "nominal",
+        "legend": null,
+        "scale":{
+          "domain": ["person", "personWhiteSpace"],
+          "range": [
+            "rgb(194,81,64)",
+            "rgb(255,255,255)"
+          ]
+        }
+      },
+      "opacity": {"value": 1},
+      "size": {"value": 200},
+      "tooltip": [
+        {"field": "Airliner"},
+        {"field": "Estimated Capacity"}
+      ]
+    }
+  }

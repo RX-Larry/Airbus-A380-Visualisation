@@ -1,0 +1,61 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "data/Speed_Comparison.csv"
+    },
+    "width": 800,
+    "height": {
+        "step": 50
+    },
+    "layer": [
+        {
+            "mark": {
+                "type": "bar", 
+                "yOffset": 5, 
+                "cornerRadiusEnd": 2, 
+                "height": {"band": 0.5}
+            },
+            "encoding": {
+                "y": {
+                    "field": "Airliner",
+                    "scale": {"padding": 0},
+                    "axis": {
+                        "bandPosition": 0,
+                        "grid": false,
+                        "domain": false,
+                        "ticks": false,
+                        "labelAlign": "left",
+                        "labelBaseline": "middle",
+                        "labelPadding": -5,
+                        "labelOffset": -15,
+                        "titleX": 5,
+                        "titleY": -5,
+                        "titleAngle": 0,
+                        "titleAlign": "left",
+                        "labelFontWeight": "normal"
+                    }
+                },
+                "x": {
+                    "aggregate": "sum",
+                    "axis": {
+                        "grid": true
+                    },
+                    "title": "Cruising Speed (KM/H)",
+                    "field": "Cruise Speed (KM/H)",
+                    "scale": {
+                        "domain": [0,950]
+                    }
+                },
+                "tooltip": [
+                    {"field": "Airliner"},
+                    {"field": "Cruise Speed (KM/H)"}
+                ]
+            }
+        }
+    ]
+
+
+
+
+
+}

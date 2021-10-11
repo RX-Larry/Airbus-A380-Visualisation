@@ -4,6 +4,49 @@
     "height": 400,
     "projection": {"type": "naturalEarth1"},
     "background":"#c9e4fb",
+    "params": [
+        {
+            "name": "Airline_Selection",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null,
+                    "Air France",
+                    "All Nippon Airways",
+                    "Asiana Airlines",
+                    "British Airways",
+                    "China Southern Airlines",
+                    "Etihad Airways",
+                    "Korean Air",
+                    "Lufthansa",
+                    "Malaysia Airlines",
+                    "Qantas",
+                    "Qatar Airways",
+                    "Singapore Airlines",
+                    "Thai Airways International",
+                    "Emirates"
+                ],
+                "labels": [
+                    "Show All",
+                    "Air France",
+                    "All Nippon Airways",
+                    "Asiana Airlines",
+                    "British Airways",
+                    "China Southern Airlines",
+                    "Etihad Airways",
+                    "Korean Air",
+                    "Lufthansa",
+                    "Malaysia Airlines",
+                    "Qantas",
+                    "Qatar Airways",
+                    "Singapore Airlines",
+                    "Thai Airways International",
+                    "Emirates"
+                ],
+                "name": "Airline Selection: "
+            }
+        }
+    ],
     "layer": [
       {
         "data": {
@@ -21,7 +64,19 @@
       },
       {
         "data": {
-          "url": "data/flights_airport.csv"
+          "url": "data/flights_airport_selection.csv"
+        },
+        "selection": {
+            "Airline_Highlight": {
+                "type": "multi",
+                "fields": ["airline"],
+                "bind": "legend"
+            },
+            "hover": {
+                "type": "single",
+                "empty": "none",
+                "on": "mouseover"
+            }
         },
         "transform": [
           {
@@ -45,7 +100,8 @@
               "fields": ["latitude", "longitude"]
             },
             "as": ["destination_latitude", "destination_longitude"]
-          }
+          },
+          {"filter": "Airline_Selection == null || datum.airline == Airline_Selection"}
         ],
         "projection": {
           "type": "naturalEarth1"
@@ -62,10 +118,23 @@
           },
           "longitude2": {"field": "destination_longitude"},
           "latitude2": {"field": "destination_latitude"},
-          "size": {"value": 1},
+          "size": {"value": 2},
+          "color": {
+            "value": "black",
+            "condition": [
+                {
+                    "selection": "hover",
+                    "value": "green"
+                }
+            ]
+          },
           "tooltip": [
             {"field": "origin", "type": "nominal"},
-            {"field": "destination", "type": "nominal"}
+            {"field": "destination", "type": "nominal"},
+            {"field": "airline", "type": "nominal"},
+            {"field": "IATA", "type": "nominal"},
+            {"field": "origin city", "type": "nominal"},
+            {"field": "destination city", "type": "nominal"}
           ]
         }
       },

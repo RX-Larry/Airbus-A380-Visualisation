@@ -5,34 +5,6 @@
     "layer": [
         {
             "data": {
-                "values": [
-                    {"year": "2019", "y": "0", "description": ""},
-                    {"year": "2019", "y": "400", "description": "COVID-19"}
-                ]
-            },
-            "encoding": {
-                "x": {"field": "year", "type": "ordinal"},
-                "y": {"field": "y", "type": "quantitative"},
-                "color": {"value": "darkgrey"}
-            },
-            "layer": [
-                {"mark": {"type": "line", "strokeDash": [5,8]}},
-                {
-                    "mark": {
-                        "type": "text", "dy": -10
-                    },
-                    "encoding": {
-                        "text": {"field": "description", "type": "nominal"},
-                        "tooltip": [
-                            {"field": "year", "type": "ordinal"},
-                            {"field": "description", "type":"nominal"}
-                        ]
-                    }
-                }         
-            ]
-        },
-        {
-            "data": {
                 "url": "data/A380_orders.csv"
               },
               "width": {"step": 40},
@@ -69,7 +41,7 @@
                   "field": "orders",
                   "type": "quantitative",
                   "scale": {
-                      "domain": [0, 450]
+                      "domain": [0, 400]
                   },
                   "axis": {"grid": false}
                 },
@@ -119,7 +91,7 @@
                   "field": "deliveries",
                   "type": "quantitative",
                   "scale": {
-                      "domain": [0, 450]
+                      "domain": [0, 400]
                   },
                   "axis": {"grid": false}
                 },
@@ -169,7 +141,7 @@
                   "field": "deliveries",
                   "type": "quantitative",
                   "scale": {
-                      "domain": [0, 450]
+                      "domain": [0, 400]
                   },
                   "axis": {"grid": false}
                 },
@@ -180,6 +152,34 @@
                   {"field": "deliveries", "type": "quantitative"}
                 ]
             }
-        }
+        },
+        {
+          "data": {
+              "values": [
+                  {"year": "2019", "y": "0", "description": ""},
+                  {"year": "2019", "y": "360", "description": "COVID-19"}
+              ]
+          },
+          "encoding": {
+              "x": {"field": "year", "type": "ordinal"},
+              "y": {"field": "y", "type": "quantitative"},
+              "color": {"value": "rgb(112,128,144)"}
+          },
+          "layer": [
+              {"mark": {"type": "line", "strokeDash": [5,8]}},
+              {
+                  "mark": {
+                      "type": "text", "dy": -10
+                  },
+                  "encoding": {
+                      "text": {"field": "description", "type": "nominal"},
+                      "tooltip": [
+                          {"field": "year", "type": "ordinal"},
+                          {"field": "description", "type":"nominal"}
+                      ]
+                  }
+              }         
+          ]
+      }
     ]
   }

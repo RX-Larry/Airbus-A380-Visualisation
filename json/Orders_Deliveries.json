@@ -45,7 +45,7 @@
                   },
                   "axis": {"grid": false}
                 },
-                "color": {"value": "#b3cbfa"},
+                "color": {"value": "rgb(230,159,0)"},
                 "tooltip": [
                   {"field": "start_year", "type": "nominal"},
                   {"field": "end_year", "type": "nominal"},
@@ -95,7 +95,7 @@
                   },
                   "axis": {"grid": false}
                 },
-                "color": {"value": "#05b106"},
+                "color": {"value": "rgb(86,180,233)"},
                 "tooltip": [
                   {"field": "start_year", "type": "nominal"},
                   {"field": "end_year", "type": "nominal"},
@@ -145,7 +145,7 @@
                   },
                   "axis": {"grid": false}
                 },
-                "color": {"value": "#05b106"},
+                "color": {"value": "rgb(86,180,233)"},
                 "tooltip": [
                   {"field": "start_year", "type": "nominal"},
                   {"field": "end_year", "type": "nominal"},

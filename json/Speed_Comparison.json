@@ -3,7 +3,7 @@
     "data": {
         "url": "data/Speed_Comparison.csv"
     },
-    "width": 800,
+    "width": 500,
     "height": {
         "step": 50
     },

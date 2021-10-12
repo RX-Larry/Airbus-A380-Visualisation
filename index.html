@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Data Viz Assgn 2 Vizzes</title>
+    <title>Airbus A380 Facts</title>
     <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -24,33 +24,99 @@
 </head>
 
 <body>
-
     <div class="page">
 
         <!-- pure grid group -->
         <div class="pure-g">
-            <div class="pure-u-1-1">
-                <h1>All Vizzes</h1>
-                <p>This page shows all vizzes to be submitted.</p>
+            <div class="pure-u-2-3">
+                <p>FIT3179 Visualisation 2</p>
+                <h1>Airbus A380 Facts</h1>
+                <h4>
+                    This page shows:
+                    <li>Capacity, Cruising Speed & Range comparison with other airliners.</li>
+                    <li>Map of all airports which the A380-800 flies to</li>
+                    <li>Map of all A380-800 flights provided by airlines.</li>
+                    <li>Cumulative Orders & Deliveries for A380-800 from year 2001 ➡ 2021.</li>
+                </h4>
+            </div>
+            <div class="pure-u-1-3">
             </div>
         </div>
         <!-- end pure grid group -->
 
+        <!-- end pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <h2>Introduction</h2>
+                <p>
+                    The Airbus A380 aka superjumbo, is a wide-body aircraft manufactured by Airbus. It is the world's
+                    largest passenger airliner. Airbus's plan was to challenge the Boeing 747 which was
+                    dominating the long haul market. Studies have been carried out in 1988 and the project
+                    was announced in 1990. On 19 December 2000, Airbus launched the $10.7 billion A380
+                    programme. The first delivery was made on 15 October 2007 to Singapore Airlines. In
+                    2019, Airbus announced that the A380 production would end in 2021 as its $25 billion
+                    investment can't be recouped and demand for the airliner was dropping.
+                </p>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+        <br>
+
         <!-- pure grid group -->
         <div class="pure-g">
-            <div class="pure-u-1-1">
-                <h2>Capacity Comparison With Other Airliners</h2>
+            <div class="pure-u-2-5">
+                <div class="description description-left">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h2>Capacity Comparison With Other Airliners</h2>
+                    <p>
+                        The visualisation on the right shows the capacity comparison for the A380-800 with
+                        other common airliners in the market. The A380-800 has the most capacity in an airliner.
+                        It has a typical seeting of 525 passengers, with a maximum certified capacity for 853
+                        passengers.
+                        <br>
+                        <br>
+                        💡 Each isotype is 100 passengers.
+                        <br>
+                        💡 Use tooltip for more information.
+                    </p>
+                </div>
             </div>
-            <div class="pure-u-2-3">
+            <div class="pure-u-3-5">
                 <div id="vis1" class="vis-container"></div>
             </div>
         </div>
         <!-- end pure grid group -->
 
+        <br>
+        <br>
+
         <!-- pure grid group -->
         <div class="pure-g">
-            <div class="pure-u-1-1">
-                <h2>Speed Comparison With Other Airliners</h2>
+            <div class="pure-u-1-3">
+                <div class="description description-left">
+                    <br>
+                    <br>
+                    <br>
+                    <h2>Cruising Speed (KM/H) Comparison With Other Airliners</h2>
+                    <p>
+                        The visualisation on the right compares cruising speed (KM/H) for the A380-800 with other common
+                        airliners in the market. Most of the airliners have very similar cruising speed.
+                        <br>
+                        <br>
+                        💡 Use tooltip to get cruising speed.
+                    </p>
+                </div>
             </div>
             <div class="pure-u-2-3">
                 <div id="vis2" class="vis-container"></div>
@@ -58,94 +124,212 @@
         </div>
         <!-- end pure grid group -->
 
+        <br>
+        <br>
+
         <!-- pure grid group -->
         <div class="pure-g">
-            <div class="pure-u-1-1">
-                <h2>Range Comparison With Other Airliners</h2>
-            </div>
             <div class="pure-u-2-3">
                 <div id="vis3" class="vis-container"></div>
+            </div>
+            <div class="pure-u-1-3">
+                <div class="description description-right">
+                    <br>
+                    <br>
+                    <br>
+                    <h2>Range (KM) Comparison With Other Airliners</h2>
+                    <p>
+                        The visualisation on the left compares range (KM) for the A380-800 with other common airliners
+                        in the market.
+                        The Airbus A380-800 has the largest range as compared to other airliners.
+                        <br>
+                        <br>
+                        💡 Use tooltip to get range.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+        <br>
+        <br>
+
+        <!-- end pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <h2>Airports The A380 Flies To</h2>
+                <p>
+                    The A380 flies to all continents around the world except for Antarctica. There are 68 destinations
+                    in total.
+                    <br>
+                    <br>
+                    💡 Hover above the circle mark to view more information about the airport.
+                </p>
             </div>
         </div>
         <!-- end pure grid group -->
 
         <!-- pure grid group -->
         <div class="pure-g">
-            <div class="pure-u-1-1">
-                <h2>Aiports Which The A380 Flies To</h2>
-            </div>
-            <div class="pure-u-2-3">
+            <div class="pure-u-1">
                 <div id="vis4" class="vis-container"></div>
             </div>
         </div>
         <!-- end pure grid group -->
 
+        <br>
+        <br>
+
+        <!-- end pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <h2>Map Of All A380-800 Flights</h2>
+                <p>
+                    Airlines such as Air France, All Nippon Airways, Asiana Airlines, British Airways, China Southern
+                    Airlines, Etihad Airways,
+                    Korean Air, Lufthansa, Malaysia Airlines, Qantas, Qatar Airways, Singapore Airlines, Thai Airways
+                    International & Emirates,
+                    offer A380-800 flights around the world.
+                    <br>
+                    <br>
+                    Emirates have the most flight paths offer compared to other airline with an amount
+                    of 55 flights. They are the only airline with the largest number of A380-800 in their fleet.
+                    <br>
+                    <br>
+                    💡 Airline Selection allows you to filter flight paths by airlines.
+                    <br>
+                    💡 Hover above a flight path to view more info.
+                </p>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
         <!-- pure grid group -->
         <div class="pure-g">
-            <div class="pure-u-1-1">
-                <h2>A380 Flights Offered By Airlines</h2>
-            </div>
-            <div class="pure-u-2-3">
+            <div class="pure-u-1">
                 <div id="vis5" class="vis-container"></div>
             </div>
         </div>
         <!-- end pure grid group -->
 
+        <br>
+        <br>
+
+        <!-- end pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <h2>Cumulative Orders & Deliveries From Year 2001 ➡ 2021</h2>
+                <p>
+                    Emirates had the largest amount of orders. Since 2019, many airlines such as Emirates,
+                    Virgin Atlantic & Lufthansa cancel many of their orders. Where we can see a sharp drop
+                    in orders in the viz below on 2019 when the Covid-19 pandemic hit.
+                    <br>
+                    <br>
+                    On 14 February, Emirates decided to cancel its order for 39 A380s and replaced them with A350s &
+                    A330neos.
+                    The final 3 orders are to be delivered to Emirates which the last A380 is scheduled to be delivered
+                    in December 2021.
+                    <br>
+                    <br>
+                    💡 Hover above a bar color to view more info.
+                </p>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
         <!-- pure grid group -->
         <div class="pure-g">
-            <div class="pure-u-1-1">
-                <h2>A380 Orders & Deliveries</h2>
-            </div>
-            <div class="pure-u-2-3">
+            <div class="pure-u-1">
                 <div id="vis6" class="vis-container"></div>
             </div>
         </div>
         <!-- end pure grid group -->
 
-        <script type="text/javascript">
-            var specVis1 = "json/Capacity_Comparison.json";
-            var specVis2 = "json/Speed_Comparison.json";
-            var specVis3 = "json/Range_Comparison.json";
-            var specVis4 = "json/Airports_Location.json";
-            var specVis5 = "json/Flight_Paths_Selection.json";
-            var specVis6 = "json/Orders_Deliveries.json";
+        <br>
 
-            vegaEmbed('#vis1', specVis1, {
-                "actions": false
-            }).then(function (result) {
-                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-            }).catch(console.error);
+        <!-- end pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <h2>End Of An Era</h2>
+                <p>
+                    As of October 2021, Airbus has received 251 firm orders, of which 248 had
+                    been delivered. Airbus's target was to sell 700 of the A380-800 in total.
+                    However, Airbus was forced to cease production of the A380-800 due to lack
+                    of demand. Even though the A380-800 was popular with passengers, most airlines
+                    view it as inefficient. Some of the reasons were: unfilled seats were unprofitable,
+                    rising prices of fuel, environmental impact, airlines, opting for smaller, but more
+                    efficient planes produced by both Boeing and Airbus.
+                    <br>
+                    <br>
+                    Some airlines were interested in Boeing's new family of 777s which deliveries would
+                    start in 2020. It offers fewer seats, but the same range as the A380-800, more payload
+                    and 2 fewer engines.
+                    <br>
+                    <br>
+                    Even though the A380-800 has ceased production, it would unlikely for the airliner to
+                    disappear from the skies any time soon. However, this airliner was an engineering marvel
+                    which legacy will be remembered.
+                </p>
+            </div>
+        </div>
+        <!-- end pure grid group -->
 
-            vegaEmbed('#vis2', specVis2, {
-                "actions": false
-            }).then(function (result) {
-                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-            }).catch(console.error);
+        <div class="pure-g">
+            <div class="pure-u-1-1 small-font">
+                <p>This visualisation is created by <a href="https://github.com/RX-Larry/Airbus-A380-Visualisation"
+                        target="_blank">Lim Tzeyi</a>. The datasource for all content can be found in <a
+                        href="#"" target=" _blank">this text file</href>.</p>
+            </div>
+        </div>
 
-            vegaEmbed('#vis3', specVis3, {
-                "actions": false
-            }).then(function (result) {
-                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-            }).catch(console.error);
+    </div>
 
-            vegaEmbed('#vis4', specVis4, {
-                "actions": false
-            }).then(function (result) {
-                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-            }).catch(console.error);
+    </div> <!-- end page -->
 
-            vegaEmbed('#vis5', specVis5, {
-                "actions": false
-            }).then(function (result) {
-                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-            }).catch(console.error);
+    <script type="text/javascript">
+        var specVis1 = "json/Capacity_Comparison.json";
+        var specVis2 = "json/Speed_Comparison.json";
+        var specVis3 = "json/Range_Comparison.json";
+        var specVis4 = "json/Airports_Location.json";
+        var specVis5 = "json/Flight_Paths_Selection.json";
+        var specVis6 = "json/Orders_Deliveries.json";
 
-            vegaEmbed('#vis6', specVis6, {
-                "actions": false
-            }).then(function (result) {
-                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-            }).catch(console.error);
-        </script>
+        vegaEmbed('#vis1', specVis1, {
+            "actions": false
+        }).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis2', specVis2, {
+            "actions": false
+        }).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis3', specVis3, {
+            "actions": false
+        }).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis4', specVis4, {
+            "actions": false
+        }).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis5', specVis5, {
+            "actions": false
+        }).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis6', specVis6, {
+            "actions": false
+        }).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+    </script>
 </body>
 
 </html>

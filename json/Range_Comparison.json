@@ -3,7 +3,7 @@
     "data": {
         "url": "data/Range_Comparison.csv"
     },
-    "width": 800,
+    "width": 500,
     "height": {
         "step": 50
     },

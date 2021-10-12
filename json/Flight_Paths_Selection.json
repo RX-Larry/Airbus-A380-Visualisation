@@ -51,7 +51,10 @@
       {
         "data": {
           "url": "data/ne_110m_admin_0_countries.topojson",
-          "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+          "format": {
+            "type": "topojson", 
+            "feature": "ne_110m_admin_0_countries"
+          }
         },
         "projection": {
           "type": "naturalEarth1"
@@ -116,9 +119,15 @@
             "field": "origin_latitude",
             "type": "quantitative"
           },
-          "longitude2": {"field": "destination_longitude"},
-          "latitude2": {"field": "destination_latitude"},
-          "size": {"value": 2},
+          "longitude2": {
+            "field": "destination_longitude"
+          },
+          "latitude2": {
+            "field": "destination_latitude"
+          },
+          "size": {
+            "value": 2
+          },
           "color": {
             "value": "black",
             "condition": [
@@ -130,11 +139,11 @@
           },
           "tooltip": [
             {"field": "origin", "type": "nominal"},
-            {"field": "destination", "type": "nominal"},
-            {"field": "airline", "type": "nominal"},
-            {"field": "IATA", "type": "nominal"},
             {"field": "origin city", "type": "nominal"},
-            {"field": "destination city", "type": "nominal"}
+            {"field": "destination", "type": "nominal"},
+            {"field": "destination city", "type": "nominal"},
+            {"field": "airline", "type": "nominal"},
+            {"field": "IATA", "type": "nominal"}
           ]
         }
       },
@@ -154,8 +163,12 @@
             "field": "latitude", 
             "type": "quantitative"
           },
-          "size": {"value": 30},
-          "color": {"value": "red"},
+          "size": {
+            "value": 30
+          },
+          "color": {
+            "value": "red"
+          },
           "tooltip": [
             {"field": "name", "type": "nominal"},
             {"field": "city", "type": "nominal"},

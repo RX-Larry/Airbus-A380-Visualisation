@@ -1,7 +1,7 @@
-Airliner,Range (KM)
-Airbus A320ceo,6200
-Boeing 737 MAX 8,6570
-Boeing 787 Dreamliner,11750
-Airbus A330-900neo,13334
-Boeing 777X,13500
-Airbus A380-800,14800
+Airliner,Range (KM),Manufacturer
+Airbus A320ceo,6200,Airbus
+Boeing 737 MAX 8,6570,Boeing
+Boeing 787 Dreamliner,11750,Boeing
+Airbus A330-900neo,13334,Airbus
+Boeing 777X,13500,Boeing
+Airbus A380-800,14800,Airbus

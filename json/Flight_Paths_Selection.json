@@ -133,7 +133,7 @@
             "condition": [
                 {
                     "selection": "hover",
-                    "value": "green"
+                    "value": "#299617"
                 }
             ]
           },

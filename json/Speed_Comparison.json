@@ -49,7 +49,21 @@
                 "tooltip": [
                     {"field": "Airliner"},
                     {"field": "Cruise Speed (KM/H)"}
-                ]
+                ],
+                "color": {
+                    "field": "Manufacturer",
+                    "type": "nominal",
+                    "scale": {
+                        "domain": [
+                            "Airbus",
+                            "Boeing"
+                        ],
+                        "range": [
+                            "rgb(230,159,0)",
+                            "rgb(0,114,178)"
+                        ]
+                    }
+                }
             }
         }
     ]

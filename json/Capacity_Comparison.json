@@ -42,7 +42,7 @@
         "scale":{
           "domain": ["person", "personWhiteSpace"],
           "range": [
-            "rgb(224,172,105)",
+            "#FF8000",
             "rgb(255,255,255)"
           ]
         }

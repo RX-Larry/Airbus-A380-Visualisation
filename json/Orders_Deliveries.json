@@ -45,7 +45,7 @@
                   },
                   "axis": {"grid": false}
                 },
-                "color": {"value": "rgb(230,159,0)"},
+                "color": {"value": "#FF9912"},
                 "tooltip": [
                   {"field": "start_year", "type": "nominal"},
                   {"field": "end_year", "type": "nominal"},

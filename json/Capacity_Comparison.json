@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "config": {"view": {"stroke": ""}},
     "width": 450,
-    "height": 60,
+    "height": 90,
     "data": {
         "url": "data/Capacity_Comparison.csv"
     },

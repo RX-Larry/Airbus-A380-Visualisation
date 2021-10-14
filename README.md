@@ -1,6 +1,6 @@
 # Airbus-A380-Visualisation
 
-This repository is a webpage which displays several visualisations about the A380-800.
+This repository is a webpage that displays several visualisations about the A380-800.
 
 Each visualisation was created using Vega-Lite.
 

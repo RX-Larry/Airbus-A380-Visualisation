@@ -7,4 +7,4 @@ Each visualisation was created using Vega-Lite.
 The html page containing the visualisations can be seen at:
 https://rx-larry.github.io/Airbus-A380-Visualisation/
 
-Dataset sources can be found in data/dataset_sources.txt
+Dataset sources can be found in https://github.com/RX-Larry/Airbus-A380-Visualisation/blob/main/data/dataset_sources.txt
